@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Quiz — QuickSmart Quiz</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/theme.css">
+</head>
+<body class="bg-light">
+
+ <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="/">
+        <svg width="36" height="36" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" class="rounded-circle p-1 bg-white shadow-sm">
+          <g fill="#0F4C5C"><circle cx="20" cy="26" r="8"/><circle cx="44" cy="26" r="8"/><path d="M16,42c6,4 32,4 40,0v4H16z"/></g>
+        </svg>
+        <span class="h6 mb-0 text-dark fw-bold">QUICKSMART QUIZ</span>
+      </a>
+      <div class="ms-auto d-flex gap-2 align-items-center">
+        <a href="/leaderboard.html" class="btn btn-outline-secondary rounded-pill px-3">LEADERBOARD</a>
+        <a id="logoutBtn" class="btn btn-outline-danger rounded-pill px-3">LOG OUT</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+
+        <!-- Modal for selecting number of questions + category -->
+        <div id="questionCountModal" class="modal d-block" style="background-color: rgba(0,0,0,0.5);">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Configure Quiz</h5>
+              </div>
+              <div class="modal-body">
+                <!--<div class="d-grid gap-2 mb-3" id="presetCountBtns">
+                  <button type="button" class="btn btn-outline-primary question-count-btn" data-count="5">5 Questions</button>
+                  <button type="button" class="btn btn-outline-primary question-count-btn" data-count="10">10 Questions</button>
+                  <button type="button" class="btn btn-outline-primary question-count-btn" data-count="15">15 Questions</button>
+                  <button type="button" class="btn btn-outline-primary question-count-btn" data-count="20">20 Questions</button>
+                </div>-->
+
+                <div class="mb-3">
+                  <label for="customCountInput" class="form-label small">Enter number of questions</label>
+                  <div class="input-group">
+                    <input type="number" id="customCountInput" class="form-control" min="1" max="100" placeholder="e.g., 12">
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="categorySelect" class="form-label small">Choose a category (optional)</label>
+                  <select id="categorySelect" class="form-select">
+                    <option value="">Any Category</option>
+                  </select>
+                </div>
+
+                <div class="d-flex justify-content-end">
+                  <button type="button" class="btn btn-secondary me-2" id="modalCancelBtn">Cancel</button>
+                  <button type="button" class="btn btn-primary" id="startQuizBtn">Start Quiz</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- progress header -->
+        <div id="quizContent" class="d-none">
+          <div class="text-center mb-4">
+            <div class="small text-muted">Question <span id="qIndex">0</span> of <span id="qTotal">0</span></div>
+            <div class="progress my-2" style="height:8px;">
+              <div id="progBar" class="progress-bar bg-success" role="progressbar" style="width:0%"></div>
+            </div>
+          </div>
+
+          <!-- card with question -->
+          <div class="card theme-card shadow-lg">
+            <div class="card-body p-5">
+              <h3 id="questionText" class="fw-bold mb-4">Loading question...</h3>
+
+              <div id="choices" class="d-grid gap-3">
+                <!-- choice buttons inserted here -->
+              </div>
+
+              <div class="mt-4 text-center d-flex gap-2 justify-content-center">
+                <button id="submitAnswer" class="btn btn-primary rounded-pill px-4">SUBMIT ANSWER</button>
+                <button id="restartBtn" class="btn btn-outline-warning rounded-pill px-4">RESTART QUIZ</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="text-center mt-4">
+            <!--<a href="/results.html" class="btn btn-link">Skip to results</a>-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/js/api.js"></script>
+  <script src="/js/uiAuth.js"></script>
+  <script src="/js/authCheck.js"></script>
+  <script src="/js/quiz.js"></script>
+</body>
+</html>

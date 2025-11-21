@@ -1,0 +1,98 @@
+:root{
+  --primary-teal: #0F4C5C;
+  --accent-mint: #2CC5A1;
+  --light-mint: #E9FFF7;
+  --soft-bg: #F6F8FA;
+}
+
+/* body */
+body{
+  background: var(--soft-bg);
+  color: #222;
+  -webkit-font-smoothing:antialiased;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+/* theme card used across pages */
+.theme-card{
+  border-radius: 14px;
+  border: none;
+  overflow: hidden;
+  background: #fff;
+}
+
+/* subtle shadow for main cards */
+.theme-card.shadow-sm{
+  box-shadow: 0 6px 20px rgba(15,76,92,0.04);
+}
+
+/* hero illustration placeholder */
+.hero-illustration{
+  width:320px;
+  height:320px;
+  background: radial-gradient(circle at 40% 40%, rgba(44,197,161,0.08), transparent 30%), linear-gradient(180deg, rgba(44,197,161,0.03), transparent);
+  border-radius: 160px;
+  display:inline-block;
+  box-shadow: 0 10px 30px rgba(15,76,92,0.06);
+}
+
+/* buttons */
+.btn-primary{
+  background: linear-gradient(180deg, var(--primary-teal), #0b3a44);
+  border: none;
+}
+.btn-primary:hover{ filter:brightness(0.95); }
+
+.btn-success{
+  background: var(--accent-mint);
+  border: none;
+  color: #fff;
+}
+.btn-success.btn-outline{
+  background: transparent;
+  border-color: var(--accent-mint);
+}
+
+/* rounded-pill used extensively - make them thicker */
+.btn.rounded-pill{
+  border-radius: 50px;
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+}
+
+/* inputs rounded */
+.form-control{
+  border-radius: 999px;
+  box-shadow: none;
+  border: 1px solid #e9eef2;
+}
+
+/* choice buttons in quiz */
+#choices .btn{
+  text-align: left;
+  border-radius: 999px;
+  background: #fff;
+  border: 1px solid #eef3f6;
+  padding: 0.9rem 1.2rem;
+}
+#choices .btn.selected{
+  background: var(--light-mint);
+  border-color: var(--accent-mint);
+}
+
+/* progress bar thin and rounded */
+.progress{
+  background: #eef6f5;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.progress .progress-bar{
+  height: 8px;
+  border-radius: 20px;
+}
+
+/* small screens adjustments */
+@media (max-width:767px){
+  .hero-illustration{ width:220px; height:220px; border-radius:110px; }
+  .start-quiz-btn{ width:100%; }
+}

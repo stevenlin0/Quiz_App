@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Profile — QuickSmart Quiz</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/theme.css">
+</head>
+<body class="bg-light">
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="/">
+        <svg width="36" height="36" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" class="rounded-circle p-1 bg-white shadow-sm">
+          <g fill="#0F4C5C"><circle cx="20" cy="26" r="8"/><circle cx="44" cy="26" r="8"/><path d="M16,42c6,4 32,4 40,0v4H16z"/></g>
+        </svg>
+        <span class="h6 mb-0 text-dark fw-bold">QUICKSMART QUIZ</span>
+      </a>
+      <div class="ms-auto d-flex gap-2">
+        <a href="/leaderboard.html" class="btn btn-primary btn-sm rounded-pill px-3 me-2">Leaderboard</a>
+        <a id="logoutBtn" class="btn btn-outline-danger rounded-pill px-3">LOG OUT</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container py-5">
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+        <div id="profileCard" class="card theme-card shadow-sm">
+          <div class="card-body p-4">
+            <div class="d-flex align-items-center justify-content-between">
+              <h3 id="profileName" class="fw-bold">Profile</h3>
+              <div>
+                <a href="/quiz.html" class="btn btn-primary btn-sm rounded-pill px-3 me-2">Play Quiz</a>
+              </div>
+            </div>
+            <div id="profileContent" class="mt-3"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/js/api.js"></script>
+  <script src="/js/uiAuth.js"></script>
+  <script src="/js/authCheck.js"></script>
+  <script src="/js/profile.js"></script>
+</body>
+</html>
