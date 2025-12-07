@@ -23,15 +23,6 @@ body{
   box-shadow: 0 6px 20px rgba(15,76,92,0.04);
 }
 
-.hero-illustration{
-  width:320px;
-  height:320px;
-  background: radial-gradient(circle at 40% 40%, rgba(44,197,161,0.08), transparent 30%), linear-gradient(180deg, rgba(44,197,161,0.03), transparent);
-  border-radius: 160px;
-  display:inline-block;
-  box-shadow: 0 10px 30px rgba(15,76,92,0.06);
-}
-
 .btn-primary{
   background: linear-gradient(180deg, var(--primary-teal), #0b3a44);
   border: none;
@@ -83,6 +74,6 @@ body{
 }
 
 @media (max-width:767px){
-  .hero-illustration{ width:220px; height:220px; border-radius:110px; }
   .start-quiz-btn{ width:100%; }
 }
+
