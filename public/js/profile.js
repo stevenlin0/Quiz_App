@@ -1,4 +1,3 @@
-// profile.js - gets /api/user/profile using token, shows play history
 const profileContent = document.getElementById('profileContent');
 
 document.getElementById('logoutBtn')?.addEventListener('click', () => {
@@ -8,7 +7,7 @@ document.getElementById('logoutBtn')?.addEventListener('click', () => {
 
 async function loadProfile(){
   const res = await apiFetch('/api/user/profile');
-  if (!res) return; // redirected on 401
+  if (!res) return;
   if (!res.ok) {
     profileContent.innerHTML = '<p class="text-danger">Could not load profile. Try logging in again.</p>';
     return;

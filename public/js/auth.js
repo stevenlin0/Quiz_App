@@ -1,4 +1,3 @@
-// auth.js - handles signup & login (works with backend endpoints from earlier messages)
 const API = '/api';
 
 document.addEventListener('submit', async (e) => {
@@ -18,8 +17,8 @@ document.addEventListener('submit', async (e) => {
       });
       const j = await res.json();
       if (res.ok) {
-          localStorage.setItem('token', j.token);
-          if (j.username) localStorage.setItem('username', j.username);
+        localStorage.setItem('token', j.token);
+        if (j.username) localStorage.setItem('username', j.username);
         window.location.href = '/quiz.html';
       } else {
         alert(j.error || 'Signup failed');
@@ -42,8 +41,8 @@ document.addEventListener('submit', async (e) => {
       });
       const j = await res.json();
       if (res.ok || j.token) {
-          localStorage.setItem('token', j.token);
-          if (j.username) localStorage.setItem('username', j.username);
+        localStorage.setItem('token', j.token);
+        if (j.username) localStorage.setItem('username', j.username);
         window.location.href = '/profile.html';
       } else {
         alert(j.error || 'Login failed');

@@ -1,12 +1,15 @@
-// authCheck.js - Check if user is logged in, redirect to login if not
+// This is to check if the user is logged in.
 function checkAuth() {
   const token = localStorage.getItem('token');
+
+  // This is if no token, send the user to the login page.
   if (!token) {
-    // No token found, redirect to login
     window.location.href = '/login.html';
   }
+
+  // This is to return the token.
   return token;
 }
 
-// Call this at the top of pages that require authentication
+// This is to run the check right away.
 checkAuth();

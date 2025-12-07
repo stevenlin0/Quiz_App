@@ -5,7 +5,6 @@
   --soft-bg: #F6F8FA;
 }
 
-/* body */
 body{
   background: var(--soft-bg);
   color: #222;
@@ -13,7 +12,6 @@ body{
   font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
 }
 
-/* theme card used across pages */
 .theme-card{
   border-radius: 14px;
   border: none;
@@ -21,12 +19,10 @@ body{
   background: #fff;
 }
 
-/* subtle shadow for main cards */
 .theme-card.shadow-sm{
   box-shadow: 0 6px 20px rgba(15,76,92,0.04);
 }
 
-/* hero illustration placeholder */
 .hero-illustration{
   width:320px;
   height:320px;
@@ -36,7 +32,6 @@ body{
   box-shadow: 0 10px 30px rgba(15,76,92,0.06);
 }
 
-/* buttons */
 .btn-primary{
   background: linear-gradient(180deg, var(--primary-teal), #0b3a44);
   border: none;
@@ -53,21 +48,18 @@ body{
   border-color: var(--accent-mint);
 }
 
-/* rounded-pill used extensively - make them thicker */
 .btn.rounded-pill{
   border-radius: 50px;
   padding-top: 0.6rem;
   padding-bottom: 0.6rem;
 }
 
-/* inputs rounded */
 .form-control{
   border-radius: 999px;
   box-shadow: none;
   border: 1px solid #e9eef2;
 }
 
-/* choice buttons in quiz */
 #choices .btn{
   text-align: left;
   border-radius: 999px;
@@ -80,7 +72,6 @@ body{
   border-color: var(--accent-mint);
 }
 
-/* progress bar thin and rounded */
 .progress{
   background: #eef6f5;
   border-radius: 20px;
@@ -91,7 +82,6 @@ body{
   border-radius: 20px;
 }
 
-/* small screens adjustments */
 @media (max-width:767px){
   .hero-illustration{ width:220px; height:220px; border-radius:110px; }
   .start-quiz-btn{ width:100%; }

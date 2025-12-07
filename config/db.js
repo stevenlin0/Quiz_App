@@ -1,7 +1,9 @@
 const mongoose = require('mongoose');
 
+// This is the function to connect to the database.
 async function connectDB(uri) {
   try {
+    // This is to connect to MongoDB.
     await mongoose.connect(uri, {
       useNewUrlParser: true,
       useUnifiedTopology: true
@@ -13,4 +15,5 @@ async function connectDB(uri) {
   }
 }
 
+// This is to like export the function so other files can use it.
 module.exports = connectDB;

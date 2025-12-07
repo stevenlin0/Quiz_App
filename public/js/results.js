@@ -1,4 +1,3 @@
-// results.js - reads from sessionStorage.latestScore and shows breakdown
 const data = JSON.parse(sessionStorage.getItem('latestScore') || 'null');
 if (!data) {
   document.getElementById('resultScore').textContent = 'No recent quiz found';

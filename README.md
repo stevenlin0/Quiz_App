@@ -1,19 +1,15 @@
 # Quiz App
 
 ## Overview
-This is the Quiz App for the assignment. Frontend is HTML/CSS/JS (served as static files). Backend is Node.js + Express + MongoDB using Mongoose. The server decides which questions to include, starts the game, tracks and stores scores, and serves the frontend.
+This is a Quiz App. Frontend is HTML/CSS/JS. Backend is Node.js + Express + MongoDB using Mongoose. The server picks the questions, starts the game, and saves scores.
 
 ## Features implemented
 - Home page, Quiz page, Results page
-- Signup/Login (JWT)
+- Signup/Login
 - Save users' scores and play history in MongoDB
 - User profile showing play history
 - Leaderboard (top 10 best scores)
 - Local questions file for early phase; OpenTDB support ready for later phase
-- Deployable to Render or similar providers
-
-## Folder structure
-(see project root structure in submission)
 
 ## How to run locally
 
@@ -28,4 +24,3 @@ This is the Quiz App for the assignment. Frontend is HTML/CSS/JS (served as stat
 - Create an account (Signup) or play as guest via `Play Now (guest)`.
 - Start a quiz from the Quiz page. After finishing you'll be redirected to the Results page.
 - If signed-in, scores are saved to your profile.
-
