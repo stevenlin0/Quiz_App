@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const User = require('../../Quiz_App/models/User');
+const User = require('../models/User');
 const fetch = (...args) =>
     import('node-fetch').then(({ default: fetch }) => fetch(...args));
 
@@ -118,3 +118,4 @@ exports.submitQuiz = async (req, res) => {
     res.status(500).json({ error: 'Submission failed' });
   }
 };
+
