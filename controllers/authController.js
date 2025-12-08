@@ -1,6 +1,6 @@
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-const User = require('../../Quiz_App/models/User');
+const User = require('../models/User');
 
 const JWT_SECRET = process.env.JWT_SECRET || 'devsecret';
 
@@ -67,3 +67,4 @@ exports.login = async (req, res) => {
     res.status(500).json({ error: 'Server error' });
   }
 };
+
