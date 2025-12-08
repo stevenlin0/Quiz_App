@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken');
-const User = require('../../Quiz_App/models/User');
+const User = require('../models/User');
 const JWT_SECRET = process.env.JWT_SECRET || 'devsecret';
 
 // This is to get the logged-in user's profile.
@@ -31,3 +31,4 @@ exports.getProfile = async (req, res) => {
     res.status(401).json({ error: 'Unauthorized' });
   }
 };
+
