@@ -29,5 +29,7 @@ This is a Quiz App. Frontend is HTML/CSS/JS. Backend is Node.js + Express + Mong
 - If signed-in, scores are saved to your profile.
 
 ## Team Members
+
 Name: Steven Lin
+
 Role: Full Stack Developer
