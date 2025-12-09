@@ -1,9 +1,11 @@
 # Quiz App
 
 ## Overview
+
 This is a Quiz App. Frontend is HTML/CSS/JS. Backend is Node.js + Express + MongoDB using Mongoose. The server picks the questions, starts the game, and saves scores.
 
 ## Features implemented
+
 - Home page, Quiz page, Results page
 - Signup/Login
 - Save users' scores and play history in MongoDB
@@ -21,6 +23,11 @@ This is a Quiz App. Frontend is HTML/CSS/JS. Backend is Node.js + Express + Mong
 6. Open `http://localhost:4000` in your browser. The server serves the frontend.
 
 ## Using the app
+
 - Create an account (Signup) or play as guest via `Play Now (guest)`.
 - Start a quiz from the Quiz page. After finishing you'll be redirected to the Results page.
 - If signed-in, scores are saved to your profile.
+
+## Team Members
+Name: Steven Lin
+Role: Full Stack Developer
